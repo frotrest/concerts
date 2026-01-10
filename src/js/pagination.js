@@ -26,7 +26,7 @@ export function maxPagination(totalPages, currentPage) {
     }
 
     if (end <= totalPages - 2) {
-      pages.push("...");
+      pages.push('...');
       pages.push(totalPages - 1);
     } else if (end === totalPages - 2) {
       pages.push(totalPages - 1);
@@ -39,26 +39,26 @@ export function maxPagination(totalPages, currentPage) {
 }
 
 export function renderPagination(totalPages, currentPage, onPageClick) {
-  const pagination = document.querySelector(".pagination");
-  pagination.innerHTML = "";
+  const pagination = document.querySelector('.pagination');
+  pagination.innerHTML = '';
 
   const pages = maxPagination(totalPages, currentPage);
 
   try {
-    pages.forEach(page => {
-      if (page === "...") {
-        const dots = document.createElement("span");
-        dots.textContent = "...";
-        dots.classList.add("pagination__dots");
+    pages.forEach((page) => {
+      if (page === '...') {
+        const dots = document.createElement('span');
+        dots.textContent = '...';
+        dots.classList.add('pagination__dots');
         pagination.appendChild(dots);
       } else {
-        const btn = document.createElement("button");
+        const btn = document.createElement('button');
         btn.textContent = page + 1;
-        btn.classList.add("pagination__btn");
+        btn.classList.add('pagination__btn');
         if (page === currentPage) {
-          btn.classList.add("active");
+          btn.classList.add('active');
         }
-        btn.addEventListener("click", () => {
+        btn.addEventListener('click', () => {
           onPageClick(page);
         });
 
