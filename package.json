@@ -7,7 +7,7 @@
     "dev": "vite",
     "build": "vite build --base=/concerts/",
     "preview": "vite preview",
-    "lint": "eslint .",
+    "lint": "npx eslint . --fix",
     "prettier": "npx prettier --write ."
   },
   "devDependencies": {
