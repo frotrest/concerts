@@ -9,9 +9,6 @@ export default defineConfig({
     emptyOutDir: true,
     sourcemap: true,
   },
-  plugins: [
-    injectHTML(),
-    FullReload(['./src/**/*.html']),
-  ],
+  plugins: [injectHTML(), FullReload(['./src/**/*.html'])],
   base: '/concerts/',
 });
