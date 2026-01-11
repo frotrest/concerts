@@ -1,4 +1,8 @@
 @charset "UTF-8";
+body {
+  background-color: rgba(11, 11, 11, 0.5);
+}
+
 .header {
   background:
     url('../img/background.png') no-repeat center/cover,
