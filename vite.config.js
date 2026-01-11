@@ -1,5 +1,4 @@
 import { defineConfig } from 'vite';
-import injectHTML from 'vite-plugin-html-inject';
 import FullReload from 'vite-plugin-full-reload';
 
 export default defineConfig({
@@ -9,6 +8,6 @@ export default defineConfig({
     emptyOutDir: true,
     sourcemap: true,
   },
-  plugins: [injectHTML(), FullReload(['./src/**/*.html'])],
+  plugins: [FullReload(['./src/**/*.html'])],
   base: '/concerts/',
 });
