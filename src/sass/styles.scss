@@ -9,7 +9,7 @@
 body {
   margin: 0px;
   padding: 0px;
-  background-color: black;
+  background-color: rgba(0, 0, 0, 0.945);
 }
 
 .container {
@@ -60,8 +60,6 @@ a {
   -webkit-mask-composite: source-in;
   mask-composite: intersect;
   animation: l1 1s infinite alternate;
-
-  /* плавное появление */
   opacity: 0;
   animation:
     fadeIn 0.6s ease forwards,
