@@ -103,6 +103,7 @@ export function createCards(content) {
       cardImg.src = card.images[0].url || 'fallback.jpg';
       cardImg.alt = card.name || 'Без названия';
       cardImg.classList.add('card__img');
+      cardImg.setAttribute('loading', 'lazy');
 
       const cardTitle = document.createElement('h2');
       cardTitle.textContent = card.name;

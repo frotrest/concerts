@@ -1,6 +1,6 @@
 .events {
   background:
-    url('../img/bg-body.png') no-repeat center / cover,
+    url('../img/bg-body.webp') no-repeat center / cover,
     #0e0e0e;
   .events-content {
     .cards {
@@ -108,7 +108,7 @@
             }
           }
           &::before {
-            content: url('../img/place.png');
+            content: url('../img/place.webp');
             margin-right: 5px;
           }
         }
