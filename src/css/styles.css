@@ -1,5 +1,5 @@
 .header {
-  background: url("../img/background.png") no-repeat center/cover, rgba(11, 11, 11, 0.5);
+  background: url("../img/background.webp") no-repeat center/cover, rgba(11, 11, 11, 0.5);
   padding-top: 40px;
 }
 @media (max-width: 768px) {
@@ -91,8 +91,7 @@
 .header-content .header-form > label {
   position: relative;
   border-radius: 20px;
-  -webkit-backdrop-filter: blur(20px);
-          backdrop-filter: blur(20px);
+  backdrop-filter: blur(20px);
   background: rgba(255, 255, 255, 0.2);
   padding: 12.5px 30px 12.5px 30px;
   width: 260px;
@@ -136,8 +135,7 @@
   align-items: center;
   gap: 70px;
   border-radius: 20px;
-  -webkit-backdrop-filter: blur(20px);
-          backdrop-filter: blur(20px);
+  backdrop-filter: blur(20px);
   background: rgba(255, 255, 255, 0.2);
   padding: 15px 30px 15px 30px;
 }
@@ -195,7 +193,7 @@
 }
 
 .events {
-  background: url("../img/bg-body.png") no-repeat center/cover, #0e0e0e;
+  background: url("../img/bg-body.webp") no-repeat center/cover, #0e0e0e;
 }
 .events .events-content .cards {
   display: flex;
@@ -305,7 +303,7 @@
   }
 }
 .events .events-content .cards .card__place::before {
-  content: url("../img/place.png");
+  content: url("../img/place.webp");
   margin-right: 5px;
 }
 .events .events-content .pagination {
@@ -459,4 +457,82 @@ a {
   .no-results {
     font-size: 30px;
   }
+}
+
+.animate__animated {
+  animation-duration: 0.8s;
+  animation-fill-mode: both;
+}
+
+[data-animate] {
+  opacity: 0;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+.animate__fadeIn {
+  animation-name: fadeIn;
+}
+
+@keyframes fadeInLeft {
+  from {
+    opacity: 0;
+    transform: translate3d(-50px, 0, 0);
+  }
+  to {
+    opacity: 1;
+    transform: translate3d(0, 0, 0);
+  }
+}
+.animate__fadeInLeft {
+  animation-name: fadeInLeft;
+}
+
+@keyframes fadeInRight {
+  from {
+    opacity: 0;
+    transform: translate3d(50px, 0, 0);
+  }
+  to {
+    opacity: 1;
+    transform: translate3d(0, 0, 0);
+  }
+}
+.animate__fadeInRight {
+  animation-name: fadeInRight;
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translate3d(0, 40px, 0);
+  }
+  to {
+    opacity: 1;
+    transform: translate3d(0, 0, 0);
+  }
+}
+.animate__fadeInUp {
+  animation-name: fadeInUp;
+}
+
+@font-face {
+  font-display: swap;
+  font-family: "Montserrat";
+  font-style: normal;
+  font-weight: 600;
+  src: url("../fonts/montserrat-v31-latin-600.woff2") format("woff2");
+}
+@font-face {
+  font-display: swap;
+  font-family: "Montserrat";
+  font-style: normal;
+  font-weight: 900;
+  src: url("../fonts/montserrat-v31-latin-900.woff2") format("woff2");
 }
